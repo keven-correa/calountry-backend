@@ -71,7 +71,7 @@ export class User {
   technologies: string;
 
   @OneToMany(() => Note, (userNote) => userNote.user)
-  notes?: Note[];
+  notes: Note[];
 
   @ManyToMany(() => Group, (group) => group.users)
   groups?: Group[];

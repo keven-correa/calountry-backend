@@ -6,7 +6,23 @@ export class CreateNoteDto {
   @IsNotEmpty()
   @MinLength(1)
   @ApiProperty()
-  title: string;
+  name: string;
+
+  @IsNotEmpty()
+  @ApiProperty()
+  start: Date;
+
+  @IsNotEmpty()
+  @ApiProperty()
+  end: Date;
+
+  @IsOptional()
+  @ApiProperty()
+  color: string;
+
+  @ApiProperty()
+  @IsOptional()
+  timed: boolean;
 
   @IsOptional()
   @IsString()
