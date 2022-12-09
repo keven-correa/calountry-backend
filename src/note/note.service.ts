@@ -41,7 +41,7 @@ export class NoteService {
       .where('user.id = :id', {
         id: loggedUser.id,
       })
-      .cache(2500)
+      .cache(35000)
       .getMany();
     return notes;
   }

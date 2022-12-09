@@ -17,6 +17,7 @@ import { NoteModule } from './note/note.module';
       password: process.env.DB_PASSWORD,
       autoLoadEntities: true,
       synchronize: true,
+      cache: true
     }),
     AuthModule,
     GroupModule,
